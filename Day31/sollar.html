@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CSS Solar System</title>
+<style>
+  :root{
+    --size: 640px; /* overall view size — change to scale everything */
+  }
+
+  body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: radial-gradient(circle at 20% 20%, #05102a, #000814 40%, #000000 100%);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color:#fff;
+  }
+
+  /* scene */
+  .solar {
+    width:var(--size);
+    height:var(--size);
+    position:relative;
+    border-radius:50%;
+    box-shadow: 0 10px 60px rgba(0,0,0,0.6), inset 0 2px 20px rgba(255,255,255,0.02);
+    overflow:visible;
+  }
+
+  /* center sun */
+  .sun {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    background: radial-gradient(circle at 35% 25%, #fff3a7 0%, #ffcc33 25%, #ff8b00 65%, #b34a00 100%);
+    box-shadow: 0 0 60px #ffb347, 0 0 120px rgba(255,140,0,0.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    color:#fff8e6;
+    font-size:12px;
+    letter-spacing:1px;
+  }
+
+  /* generic orbit wrapper: this rotates, the planet is positioned at top of wrapper */
+  .orbit {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform-origin:50% 50%;
+    border-radius:50%;
+    pointer-events:auto;
+  }
+
+  /* visible orbit ring */
+  .orbit .ring {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    border-radius:50%;
+    border:1px dashed rgba(255,255,255,0.08);
+    width:100%;
+    height:100%;
+  }
+
+  /* planet placed at top of its orbit wrapper */
+  .planet {
+    position:absolute;
+    left:50%;
+    top:0;
+    transform:translate(-50%,-50%);
+    border-radius:50%;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:10px;
+    color:rgba(255,255,255,0.9);
+  }
+
+  /* hover to pause orbit */
+  .orbit:hover { animation-play-state: paused; }
+
+  /* Planet & orbit specifics (radius, size, speed) */
+  /* Mercury-like */
+  .orbit.orbit1 { width:180px; height:180px; margin-left:-90px; margin-top:-90px; animation: spin 8s linear infinite; }
+  .orbit.orbit1 .planet { width:12px; height:12px; background: linear-gradient(135deg,#bfbfbf,#9e9e9e); }
+  /* Venus-like */
+  .orbit.orbit2 { width:250px; height:250px; margin-left:-125px; margin-top:-125px; animation: spin 12s linear infinite reverse; }
+  .orbit.orbit2 .planet { width:18px; height:18px; background: linear-gradient(135deg,#ffd6a5,#ff9f43); }
+  /* Earth-like */
+  .orbit.orbit3 { width:340px; height:340px; margin-left:-170px; margin-top:-170px; animation: spin 18s linear infinite; }
+  .orbit.orbit3 .planet { width:20px; height:20px; background: linear-gradient(135deg,#2d9cdb,#1b6fa8); box-shadow: 0 0 8px rgba(45,156,219,0.3); }
+  /* Mars-like */
+  .orbit.orbit4 { width:430px; height:430px; margin-left:-215px; margin-top:-215px; animation: spin 28s linear infinite reverse; }
+  .orbit.orbit4 .planet { width:14px; height:14px; background: linear-gradient(135deg,#ff8b8b,#cc3b3b); }
+
+  /* a simple moon for Earth (nested orbit) */
+  .moon-orbit{
+    position:absolute;
+    left:50%;
+    top:20px; /* positioned relative inside planet wrapper */
+    width:50px;
+    height:50px;
+    transform-origin:50% 50%;
+    animation: spin 6s linear infinite;
+  }
+  .moon{
+    position:absolute;
+    left:50%;
+    top:0;
+    transform:translate(-50%,-50%);
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  }
+
+  /* spin keyframes for orbits */
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  /* small responsiveness: scale down for small screens */
+  @media (max-width:700px){
+    :root{ --size: 340px; }
+    .sun { width:70px; height:70px; font-size:10px; }
+  }
+</style>
+</head>
+<body>
+  <div class="solar" aria-label="Solar system demo">
+    <div class="sun" role="img" aria-label="Sun">SUN</div>
+
+    <div class="orbit orbit1" title="orbit 1 (Mercury)">
+      <div class="ring" aria-hidden="true"></div>
+      <div class="planet" aria-label="Mercury"></div>
+    </div>
+
+    <div class="orbit orbit2" title="orbit 2 (Venus)">
+      <div class="ring" aria-hidden="true"></div>
+      <div class="planet" aria-label="Venus"></div>
+    </div>
+
+    <div class="orbit orbit3" title="orbit 3 (Earth)">
+      <div class="ring" aria-hidden="true"></div>
+      <div class="planet" aria-label="Earth">
+        <!-- nested moon orbit attached to earth -->
+        <div class="moon-orbit" aria-hidden="false">
+          <div class="moon" aria-label="Moon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="orbit orbit4" title="orbit 4 (Mars)">
+      <div class="ring" aria-hidden="true"></div>
+      <div class="planet" aria-label="Mars"></div>
+    </div>
+  </div>
+</body>
+</html>

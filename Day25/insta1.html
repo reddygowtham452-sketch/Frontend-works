@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram</title>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    gap: 40px;
+  }
+  .insta img{
+    width: 400px;
+    border-radius: 20px;
+  }
+  .login{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 30px;
+    text-align: center;
+    width: 260px;
+    border-radius: 8px;
+  }
+  .login img{
+    width: 180px;
+    margin-bottom: 20px;
+  }
+  .login input{
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fafafa;
+  }
+  .login button{
+    width: 100%;
+    padding: 8px;
+    background: #3897f0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .login button:hover{
+    background: #3181d7;
+  }
+  .login a{
+    text-decoration: none;
+    color: #00376b;
+    font-size: 13px;
+  }
+  .login p{
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  footer ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 40px 0;
+    gap: 15px;
+    font-size: 13px;
+    color: #737373;
+  }
+  footer ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="insta">
+    <img src="https://i.imgur.com/zqpwkLQ.png" alt="Instagram phone">
+  </div>
+
+  <div class="login">
+    <img src="https://www.logo.wine/a/logo/Instagram/Instagram-Wordmark-Black-Logo.wine.svg" alt="Instagram logo">
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button>Log In</button>
+    <p><a href="#">Forgot password?</a></p>
+    <hr>
+    <p>Don't have an account? <a href="#">Sign up</a></p>
+  </div>
+</div>
+
+<footer>
+  <ul>
+    <li>Meta</li>
+    <li>About</li>
+    <li>Blog</li>
+    <li>Jobs</li>
+    <li>Help</li>
+    <li>Privacy</li>
+    <li>Terms</li>
+    <li>Locations</li>
+  </ul>
+</footer>
+
+</body>
+</html>

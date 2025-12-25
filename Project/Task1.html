@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H&M Category - HTML/CSS Only</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-text-primary: #222;
+            --color-text-secondary: #555;
+            --color-background-light: #fff;
+            --color-background-grey: #f5f5f5;
+            --color-accent: #000;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--color-text-primary);
+            background-color: var(--color-background-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--color-text-primary);
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--color-text-secondary);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .header {
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            background: var(--color-background-light);
+            z-index: 100;
+        }
+        
+        .top-utility-bar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 8px 0;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .top-utility-bar a {
+            margin-left: 20px;
+            color: var(--color-text-secondary);
+        }
+
+        .main-header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 15px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin: 10px 0;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .main-nav a {
+            font-weight: 600;
+            padding: 5px 0;
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .main-nav a:hover {
+            border-bottom: 2px solid var(--color-accent);
+        }
+
+        .category-header {
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .category-header h1 {
+            font-weight: 400;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .breadcrumb {
+            font-size: 0.8rem;
+            color: var(--color-text-secondary);
+        }
+
+        .page-content {
+            display: flex;
+            padding: 30px 0;
+        }
+
+        .filter-sidebar {
+            width: 250px; 
+            padding-right: 30px;
+            flex-shrink: 0; 
+        }
+
+        .filter-group {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+
+        .filter-group h4 {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-group ul {
+            list-style: none;
+            font-size: 0.8rem;
+        }
+
+        .filter-group li {
+            padding: 3px 0;
+            color: var(--color-text-secondary);
+        }
+        
+        .filter-group li:hover {
+            text-decoration: underline;
+        }
+        
+        .product-area {
+            flex-grow: 1; 
+            padding-left: 15px;
+        }
+
+        .sort-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 0.8rem;
+            color: var(--color-text-secondary);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .product-card-image {
+            width: 100%;
+            height: 350px;
+            background-color: #eee;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .card-1 { background-image: url('https://picsum.photos/400/600?random=10'); }
+        .card-2 { background-image: url('https://picsum.photos/400/600?random=11'); }
+        .card-3 { background-image: url('https://picsum.photos/400/600?random=12'); }
+        .card-4 { background-image: url('https://picsum.photos/400/600?random=13'); }
+        .card-5 { background-image: url('https://picsum.photos/400/600?random=14'); }
+        .card-6 { background-image: url('https://picsum.photos/400/600?random=15'); }
+        .card-7 { background-image: url('https://picsum.photos/400/600?random=16'); }
+        .card-8 { background-image: url('https://picsum.photos/400/600?random=17'); }
+
+        .product-card-title {
+            font-weight: 400;
+            margin-bottom: 3px;
+            font-size: 0.9rem;
+        }
+        
+        .product-card-price {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .footer {
+            background-color: var(--color-background-grey);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--color-text-secondary);
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 1200px) {
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .page-content {
+                flex-direction: column;
+            }
+            .filter-sidebar {
+                width: 100%; 
+                padding: 0 0 20px 0;
+            }
+            .product-area {
+                padding-left: 0;
+            }
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .filter-group {
+                display: none; 
+            }
+            .filter-sidebar h3 {
+                text-align: center;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="top-utility-bar">
+                <a href="#">Sign in</a>
+                <a href="#">Favorites</a>
+                <a href="#">Shopping bag (0)</a>
+                <a href="#">Search</a>
+            </div>
+
+            <div class="main-header-content">
+                <div class="logo">H&M</div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Kids</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sale</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="category-header">
+            <p class="breadcrumb">Women / Shop By Product / **Jackets & Coats**</p>
+            <h1>JACKETS & COATS</h1>
+            <p style="font-size:0.9rem; color: var(--color-text-secondary);">Browse our latest collection of outerwear for every season.</p>
+        </div>
+
+        <div class="page-content">
+            
+            <aside class="filter-sidebar">
+                <h3 style="font-weight: 600;">Filters</h3>
+                
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <ul>
+                        <li><a href="#">Blazers</a></li>
+                        <li><a href="#">Denim Jackets</a></li>
+                        <li><a href="#">Parkas</a></li>
+                        <li><a href="#">Trench Coats</a></li>
+                        <li><a href="#">Vests</a></li>
+                    </ul>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Color</h4>
+                    <ul>
+                        <li><a href="#">Black</a></li>
+                        <li><a href="#">Beige</a></li>
+                        <li><a href="#">Blue</a></li>
+                        <li><a href="#">Red</a></li>
+                    </ul>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Size</h4>
+                    <ul>
+                        <li><a href="#">XS</a></li>
+                        <li><a href="#">S</a></li>
+                        <li><a href="#">M</a></li>
+                        <li><a href="#">L</a></li>
+                        <li><a href="#">XL</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="product-area">
+                
+                <div class="sort-bar">
+                    <p>87 Items</p>
+                    <p>Sort by: **Newest Arrivals**</p>
+                </div>
+
+                <div class="product-grid">
+                    
+                    <a href="#" class="product-card">
+                        <div class="product-card-image card-1"></div>
+                        <div class="product-card-title">Wool-blend Trench Coat</div>
+                        <div class="product-card-price">₹ 4999</div>
+                    </a>
+
+                    <a href="#" class="product-card">
+                        <div class="product-card-image card-2"></div>
+                        <div class="product-card-title">Oversized Denim Jacket</div>
+                        <div class="product-card-price">₹ 2499</div>
+                    </a>
+                    
+                    <a href="#" class="product-card">
+                        <div class="product-card-image card-3"></div>
+                        <div class="product-card-title">Padded Puffer Jacket</div>
+                        <div class="product-card-price">₹ 3999</div>
+                    </a>
+                    
+                    <a href="#" class="product-card">
+                        <div class="product-card-image card-4"></div>
+                        <div class="product-card-title">Double-breasted Blazer</div>
+                        <div class="product-card-price">₹ 2999</div>
+                    </a>
+                    
+                    <a href="#" class="product-card">
+                        <div class="product-card-image card-5"></div>
+                        <div class="product-card-title">Waterproof Parka</div>
+                        <div class="product-card-price">₹ 5999</div>
+                    </a>
+
+                    <a href="#" class="product-card">
+                        <div class="product-card-image card-6"></div>
+                        <div class="product-card-title">Fleece Lined Vest</div>
+                        <div class="product-card-price">₹ 1499</div>
+                    </a>
+                    
+                    <a href="#" class="product-card">
+                        <div class="product-card-image card-7"></div>
+                        <div class="product-card-title">Quilted Lightweight Coat</div>
+                        <div class="product-card-price">₹ 3499</div>
+                    </a>
+
+                    <a href="#" class="product-card">
+                        <div class="product-card-image card-8"></div>
+                        <div class="product-card-title">Faux Suede Biker Jacket</div>
+                        <div class="product-card-price">₹ 2799</div>
+                    </a>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>H&M Group. The content of this site is copyright-protected.</p>
+    </footer>
+
+</body>
+</html>

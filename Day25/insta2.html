@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fafafa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .image-section img {
+      width: 380px;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-box {
+      width: 300px;
+      background-color: #fff;
+      border: 1px solid #dbdbdb;
+      padding: 30px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .login-box img {
+      width: 180px;
+      margin-bottom: 25px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fafafa;
+      font-size: 14px;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 9px;
+      background-color: #0095f6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      margin-top: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .login-box button:hover {
+      background-color: #007bd4;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      color: #8e8e8e;
+      font-size: 13px;
+      margin: 15px 0;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #dbdbdb;
+      margin: 0 10px;
+    }
+
+    .facebook-login {
+      color: #385185;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 8px;
+    }
+
+    .facebook-login i {
+      margin-right: 6px;
+      font-size: 16px;
+      vertical-align: middle;
+    }
+
+    .forgot {
+      display: block;
+      margin-top: 12px;
+      font-size: 12px;
+      color: #00376b;
+      text-decoration: none;
+    }
+
+    .signup-box {
+      border: 1px solid #dbdbdb;
+      background-color: #fff;
+      text-align: center;
+      width: 300px;
+      padding: 20px;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+
+    .signup-box a {
+      color: #0095f6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #737373;
+      font-size: 12px;
+      text-align: center;
+      padding-bottom: 40px;
+    }
+
+    footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      gap: 15px;
+      margin-bottom: 10px;
+      padding: 0;
+    }
+
+    footer li:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .image-section img {
+        width: 250px;
+      }
+
+      .login-box, .signup-box {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main">
+    <div class="image-section">
+      <!-- Use your local image or any online image -->
+      <img src="../Day25/image.png" alt="Instagram App Preview" />
+    </div>
+
+    <div>
+      <div class="login-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" alt="Instagram Logo" />
+        <input type="text" placeholder="Phone number, username, or email" />
+        <input type="password" placeholder="Password" />
+        <button>Log in</button>
+
+        <div class="divider">OR</div>
+
+        <a href="#" class="facebook-login">
+          <i class="bi bi-facebook"></i> Log in with Facebook
+        </a>
+
+        <a href="#" class="forgot">Forgotten your password?</a>
+      </div>
+
+      <div class="signup-box">
+        Don’t have an account? <a href="#">Sign up</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <ul>
+      <li>Meta</li><li>About</li><li>Blog</li><li>Jobs</li><li>Help</li><li>API</li>
+      <li>Privacy</li><li>Terms</li><li>Locations</li><li>Instagram Lite</li>
+      <li>Meta AI</li><li>Threads</li><li>Meta Verified</li>
+    </ul>
+    <p>English (UK) © 2025 Instagram from Meta</p>
+    
+  </footer>
+</body>
+</html>

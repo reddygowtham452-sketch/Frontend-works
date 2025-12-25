@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            height:100vh;
+            border:solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        background: url("https://wallpaperaccess.com/full/1314202.jpg") no-repeat center/cover;
+        }
+        .card
+        {
+          
+            animation-duration: 25s;
+            animation-name: movement;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .earth
+        {
+            height:250px;
+            width:250px;
+            border-radius: 50%;;
+            background: url("https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002131/GSFC_20171208_Archive_e002131~large.jpg") no-repeat center/cover;
+             animation-duration: 25s;
+            animation-name: movement;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+        .moon
+        {
+            border:pink;
+            height:100px;
+            width:100px;
+            border-radius: 50%;
+            background: url("https://i.pinimg.com/originals/a1/01/e2/a101e22fc458c1110d418ee309f240c8.png") no-repeat center/cover;
+            margin:auto;
+             animation-duration: 15s;
+            animation-name: movement;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .content
+        {
+       
+            height:500px;
+            width:500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        @keyframes movement
+        {
+            from{transform:rotate(0deg);}
+            to{transform: rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="card">
+         <div class="content">
+            <div class="earth"></div>
+        </div>
+        <div class="moon"></div>
+       </div>
+    </div>
+</body>
+</html>

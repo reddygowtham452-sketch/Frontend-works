@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>nav bars</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<style>
+    *
+    {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+    #askformovies
+    {
+        background-color: rgba(0, 0, 0, 0.885);
+        display:flex;
+        gap:15px;
+        color:white;
+        height:60px;
+        align-items: center;
+        border-radius: 15px;;
+        
+    }
+    #askformovies svg
+    {
+        fill:rgba(255, 5, 5, 0.877);
+        width:90px;
+        margin-left:30px;
+    }
+    #askformovies ul
+    {
+        display:flex;
+        gap:20px;
+    }
+    #askformovies ul li
+    {
+        list-style-type:none;
+        font-weight:500;
+    }
+     #askformovies ul li:hover
+    {
+        color:rgba(255, 5, 5, 0.877);;
+        transition: color 0.3s ease-out;
+    }
+    #askformovies i
+    {
+        margin-left:730px;
+        
+        
+    }
+
+
+    #Bootstrap
+    {
+        margin-top:16px;
+        height:50px;
+        background-color:#7952b3;
+        display:flex;
+        gap:15px;
+        align-items: center;
+        border-radius:20px;
+    }
+
+    #Bootstrap svg:first-child
+    {
+        color:white;
+        height:50px;
+         margin-left:90px;
+         margin-right: 20px;
+    }
+
+    #Bootstrap ul
+    {
+        margin-left:-20px;
+        display:flex;
+        gap:20px;
+        color:rgba(245, 245, 245, 0.756);
+    }
+     #Bootstrap ul li
+    {
+        list-style-type: none;
+        text-transform: capitalize;
+    }
+    #Bootstrap ul li:hover
+    {
+        color:white;
+        transition: 0.2s color ease-out;
+    }
+    #end
+    {
+        display:flex;
+        gap:0px;
+        align-items: center;
+        margin-left: 750px;
+        
+    }
+     #Bootstrap #end svg
+    {
+       
+        color:white;
+        height:13px;
+        margin-left:-8px;
+    }
+    #Bootstrap #end svg:first-child
+    {
+        margin-right:4px;
+    }
+    #end button{
+        border:solid 1px #ffe484;
+        border-radius:3px;
+        background-color:#7952b3;
+        padding:4px 7px;;
+        /* #ffe484 */
+        color:#ffe484;
+        margin-left:8px;
+
+    }
+    #end button:hover
+    {
+        background-color:#ffe484;
+        color:black;
+        transition: 1s color ease-out;
+
+    }
+
+    #w3schools
+    {
+        margin-top:30px;
+        height:50px;
+        background-color: rgb(255, 255, 255); 
+        display:flex;
+        gap:380px;
+        /* border:solid; */
+        
+        align-items:center;
+    }
+     #w3schools #first
+     {
+        display:flex;
+        gap:20px;
+        align-items:center;
+     }
+
+      #w3schools #first ul 
+      {
+        display:flex;
+        gap:20px; 
+        align-items:center;
+      }
+
+     #w3schools #first ul li:hover {
+  background-color: #04aa6d;
+  color: white;
+  padding: 15px 0; 
+  transition: all 0.3s ease; 
+  border-radius: 5px; 
+}
+
+
+        #w3schools #last
+     {
+        display:flex;
+        gap:20px;
+        align-items:center;
+     }
+
+      #w3schools #last ul 
+      {
+        display:flex;
+        gap:20px; 
+        align-items:center;
+      }
+
+    
+
+    #w3schools img
+    {
+        height:57px;
+    }
+      #w3schools ul li
+    {
+        list-style-type: none;
+        text-transform: capitalize;
+    }
+    #w3schools #Search
+    {
+        padding:5px 10px;;
+        font-size: 1rem;
+        border:none;
+        border-radius: 16px;
+        color:gray;
+        background-color: white;;
+        border:gray solid 1.2px;
+        font-weight:lighter;
+    }
+    #w3schools #Search:hover
+    {
+        background-color: rgba(245, 245, 220, 0.23);
+         transition:  background-color 0.3s ease;
+    }
+
+    #w3schools #Search svg
+    {
+        height:20px;
+    }
+
+    #w3schools #dots
+    {
+        height:20px;
+        margin-left:-10px;
+    }
+     #w3schools #dots:hover
+     {
+       
+        width:25px;
+        height:25px;
+        border-radius: 50px;
+        background-color:rgba(128, 128, 128, 0.366);
+        transition:  background-color 0.3s ease;
+     }
+     #w3schools #Signin
+    {
+        padding:7px 10px;        font-size: 1rem;
+        border:none;
+        border-radius: 15px;
+          background-color: #04aa6d;
+          color:aliceblue;
+    }
+   
+
+    #w3schools #last ul li svg
+    {
+        height:14px;
+        margin-right: 5px;
+        margin-top:3px; 
+        color: #7952b3;
+    }
+
+    
+    #w3schools #last ul li:hover
+    {
+        background-color:rgba(128, 128, 128, 0.411);
+        border-radius:10px;
+        padding:4px 0px;
+
+    }
+
+
+    
+    #w3schools #last button svg
+    {
+      
+        color:white;
+        margin-right:3px;
+    }
+
+      #w3schools #last button:hover
+      {
+        background-color: #03905ce3;
+      }
+
+      #Apple
+      {
+        height:50px;
+        background-color: #151516;
+        color:rgba(255, 255, 255, 0.767);
+        fill:white;
+        display:flex;
+        gap:30px;
+        justify-content: center;
+        align-items: center;
+       
+      }
+      #Apple ul li:hover
+      {
+        color:white;
+        transition: color 0.3s ease;
+      }
+      #Apple svg
+      {
+         color:white;
+
+      }
+      #Apple ul
+      {
+       display:flex;
+       gap:30px; 
+       justify-content: space-around;
+      }
+
+      #Apple ul li
+      {
+        list-style-type:none;
+
+      }
+
+
+      #Swiggy
+      {
+        height:70px;
+        background-color: #ff5200;
+        display: flex;
+        gap:50px;
+        justify-content: space-around;
+        align-items: center;
+         
+      }
+
+      #Swiggy img
+      {
+        color:#151516;
+        width:150px;
+      }
+
+      #Swiggy #last
+      {
+        display:flex;
+        gap:40px;
+      }
+
+      #Swiggy #app
+      {
+        border:white solid 1.5px;
+        padding:17px 15px;
+        background:transparent;
+        color:white;
+        font-weight:bold;
+        border-radius: 10px;;
+      }
+      #Swiggy button i
+      {
+        width:10px;
+        margin-left:5px;
+      }
+       #Swiggy button
+      {
+        border:none;
+        padding:17px 15px;
+        background:transparent;
+        color:white;
+        font-weight:bolder;
+        font-size:medium;
+        border-radius: 10px;;
+      }
+
+      #Swiggy #sign
+      {
+        border:none;
+        padding:17px 20px;
+        background:black;
+        color:white;
+        font-weight:bold;
+        border-radius: 10px;
+      }
+
+
+      
+        .GFG{
+            background-color: aliceblue;
+            height:10vh;
+            display:flex;
+            align-items:center;
+            justify-content:space-around;
+            padding:0 40px;
+        }
+
+        
+        .GFG ul{
+            display:flex;
+            align-items:center;
+            gap:30px;
+        }
+
+        .GFG li{
+            list-style:none;
+            cursor:pointer;
+        }
+
+        .GFG .logo-area{
+            display:flex;
+            align-items:center;
+            gap:20px;
+        }
+
+        .GFG .search{
+            border:1px solid #ccc;
+            padding:6px 10px;
+            border-radius:6px;
+        }
+
+        .GFG .search input{
+            border:none;
+            outline:none;
+            background:none;
+        }
+
+        .GFG .right{
+            display:flex;
+            gap:10px;
+        }
+
+        .GFG button{
+            border:none;
+            background:#000000cb;
+            padding:8px 12px;
+            border-radius:5px;
+            cursor:pointer;
+            color:green;
+            font-weight: bolder;
+        }
+
+
+</style>
+<body>
+    <h2 style="font-family: Poppins, sans-serif; color:#222; margin:20px 0 10px;">Netflix Navbar</h2>
+    <nav id="askformovies">
+        <svg viewBox="0 0 111 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="default-ltr-iqcdef-cache-17hp4kx e38gzvf2"><g><path d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z"></path></g></svg>
+        <ul>
+            <li>Genres</li>
+            <li>Movies</li>
+            <li>Series</li>
+            <li>Mini-Series</li>
+            <li>Country</li>
+            <li>Network</li>
+            <li>Mood</li>
+            <li>Request</li>
+        </ul>
+        <i class="bi bi-search"></i>
+    </nav>
+
+    <h2 style="font-family: Poppins, sans-serif; color:#222; margin:20px 0 10px;">Bootstrap Navbar</h2>
+    <nav id="Bootstrap">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block my-1" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
+        <ul>
+            <li>Home</li>
+            <li>Docs</li>
+            <li>Examples</li>
+            <li>Icons</li>
+            <li>Themes</li>
+            <li>Blog</li>
+        </ul>
+        <div id="end">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 499.36" role="img"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 416.32" role="img"><title>Twitter</title><path fill="currentColor" d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 40 41" role="img"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+            <button>Download</button>     
+        </div>   
+    </nav>
+
+<h2 style="font-family: Poppins, sans-serif; color:#222; margin:20px 0 10px;">W3Schools Navbar</h2>
+    <nav id="w3schools">
+      <div id="first">
+         <img src="https://avatars.githubusercontent.com/u/77673807?v=4" alt=""  title="Home">
+    </a>
+        <ul><li>
+            Tutorials
+        </li>
+        <li> References </li>
+        <li> Exercises </li>
+        <li> Certificates</li></ul>
+        <button id="Search"><i>Search...</i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<svg id="tnb-google-search-icon" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.8153 10.3439C12.6061 9.2673 13.0732 7.9382 13.0732 6.5C13.0732 2.91015 10.163 0 6.57318 0C2.98333 0 0.0731812 2.91015 0.0731812 6.5C0.0731812 10.0899 2.98333 13 6.57318 13C8.01176 13 9.3412 12.5327 10.4179 11.7415L10.4171 11.7422C10.4466 11.7822 10.4794 11.8204 10.5156 11.8566L14.3661 15.7071C14.7566 16.0976 15.3898 16.0976 15.7803 15.7071C16.1708 15.3166 16.1708 14.6834 15.7803 14.2929L11.9298 10.4424C11.8936 10.4062 11.8553 10.3734 11.8153 10.3439ZM12.0732 6.5C12.0732 9.53757 9.61075 12 6.57318 12C3.53561 12 1.07318 9.53757 1.07318 6.5C1.07318 3.46243 3.53561 1 6.57318 1C9.61075 1 12.0732 3.46243 12.0732 6.5Z" fill="black"></path>
+          </svg></button>
+          <svg id = "dots"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 208C289.1 208 264 182.9 264 152C264 121.1 289.1 96 320 96C350.9 96 376 121.1 376 152C376 182.9 350.9 208 320 208zM320 432C350.9 432 376 457.1 376 488C376 518.9 350.9 544 320 544C289.1 544 264 518.9 264 488C264 457.1 289.1 432 320 432zM376 320C376 350.9 350.9 376 320 376C289.1 376 264 350.9 264 320C264 289.1 289.1 264 320 264C350.9 264 376 289.1 376 320z"></path></svg>
+
+      </div>
+       <div id="last">
+         <ul>
+            <li><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512" aria-hidden="true">
+          <path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z" fill="currentColor"></path>
+        </svg>Spaces</li>
+        <li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" focusable="false" class="chakra-icon css-9gdywz" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <path d="M622.34 153.2L343.4 67.5c-15.2-4.67-31.6-4.67-46.79 0L17.66 153.2c-23.54 7.23-23.54 38.36 0 45.59l48.63 14.94c-10.67 13.19-17.23 29.28-17.88 46.9C38.78 266.15 32 276.11 32 288c0 10.78 5.68 19.85 13.86 25.65L20.33 428.53C18.11 438.52 25.71 448 35.94 448h56.11c10.24 0 17.84-9.48 15.62-19.47L82.14 313.65C90.32 307.85 96 298.78 96 288c0-11.57-6.47-21.25-15.66-26.87.76-15.02 8.44-28.3 20.69-36.72L296.6 284.5c9.06 2.78 26.44 6.25 46.79 0l278.95-85.7c23.55-7.24 23.55-38.36 0-45.6zM352.79 315.09c-28.53 8.76-52.84 3.92-65.59 0l-145.02-44.55L128 384c0 35.35 85.96 64 192 64s192-28.65 192-64l-14.18-113.47-145.03 44.56z"></path>
+        </svg>For Teachers</li>
+        <li><svg xmlns="http://www.w3.org/2000/svg" width="15" height="36" viewBox="0 0 12 16" fill="none" aria-hidden="true">
+          <path d="M6.65723 6.24707C6.76704 5.91764 7.233 5.91765 7.34281 6.24707L7.98828 8.1835C8.276 9.04666 8.95332 9.72399 9.81648 10.0117L11.7529 10.6572C12.0824 10.767 12.0824 11.233 11.7529 11.3428L9.81649 11.9883C8.95332 12.276 8.27599 12.9533 7.98828 13.8165L7.34281 15.7529C7.233 16.0823 6.76704 16.0823 6.65723 15.7529L6.01173 13.8165C5.72401 12.9533 5.04669 12.276 4.18353 11.9883L2.24707 11.3428C1.91764 11.233 1.91764 10.767 2.24707 10.6572L4.18353 10.0117C5.04669 9.72399 5.72401 9.04667 6.01173 8.18352L6.65723 6.24707Z" fill="#9763f6"></path>
+          <path d="M2.79434 1.14824C2.86023 0.950586 3.1398 0.950587 3.20569 1.14824L3.59297 2.3101C3.7656 2.828 4.172 3.2344 4.6899 3.40703L5.85177 3.79432C6.04942 3.86021 6.04942 4.13978 5.85177 4.20567L4.6899 4.59296C4.172 4.76559 3.7656 5.17199 3.59297 5.68989L3.20569 6.85176C3.13981 7.04941 2.86023 7.04942 2.79434 6.85176L2.40704 5.68988C2.23441 5.17198 1.82801 4.76559 1.31012 4.59296L0.148241 4.20567C-0.0494137 4.13978 -0.0494138 3.86021 0.148241 3.79432L1.31012 3.40703C1.82802 3.2344 2.23441 2.82801 2.40704 2.31011L2.79434 1.14824Z" fill="#9763f6"></path>
+          <path d="M9.8629 0.0988265C9.90682 -0.032943 10.0932 -0.0329419 10.1371 0.098828L10.3953 0.873401C10.5104 1.21867 10.7813 1.4896 11.1266 1.60469L11.9012 1.86288C12.0329 1.9068 12.0329 2.09319 11.9012 2.13711L11.1266 2.39531C10.7813 2.51039 10.5104 2.78133 10.3953 3.12659L10.1371 3.90117C10.0932 4.03294 9.90682 4.03294 9.8629 3.90117L9.6047 3.12659C9.48961 2.78132 9.21868 2.5104 8.87342 2.39531L8.09883 2.13711C7.96706 2.09319 7.96706 1.9068 8.09883 1.86288L8.87342 1.60469C9.21868 1.4896 9.48961 1.21867 9.6047 0.873408L9.8629 0.0988265Z" fill="#9763f6"></path>
+        </svg>Upgrade</li>
+        <li><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" aria-hidden="true">
+          <path d="M24 0C10.7 0 0 10.7 0 24S10.7 48 24 48H69.5c3.8 0 7.1 2.7 7.9 6.5l51.6 271c6.5 34 36.2 58.5 70.7 58.5H488c13.3 0 24-10.7 24-24s-10.7-24-24-24H199.7c-11.5 0-21.4-8.2-23.6-19.5L170.7 288H459.2c32.6 0 61.1-21.8 69.5-53.3l41-152.3C576.6 57 557.4 32 531.1 32h-411C111 12.8 91.6 0 69.5 0H24zM131.1 80H520.7L482.4 222.2c-2.8 10.5-12.3 17.8-23.2 17.8H161.6L131.1 80zM176 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm336-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z" fill="currentColor"></path>
+        </svg>Get Certified</li></ul>
+        <button id = "Signin"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="tnb-sign-in-icon">
+          <path d="M7 7C8.933 7 10.5 5.433 10.5 3.5C10.5 1.567 8.933 0 7 0C5.067 0 3.5 1.567 3.5 3.5C3.5 5.433 5.067 7 7 7ZM9.33333 3.5C9.33333 4.78866 8.28866 5.83333 7 5.83333C5.71134 5.83333 4.66667 4.78866 4.66667 3.5C4.66667 2.21134 5.71134 1.16667 7 1.16667C8.28866 1.16667 9.33333 2.21134 9.33333 3.5Z" fill="white"></path>
+          <path d="M14 12.8333C14 14 12.8333 14 12.8333 14H1.16667C1.16667 14 0 14 0 12.8333C0 11.6667 1.16667 8.16667 7 8.16667C12.8333 8.16667 14 11.6667 14 12.8333ZM12.8333 12.8293C12.8316 12.5414 12.6539 11.6789 11.8625 10.8875C11.1016 10.1265 9.67062 9.33333 6.99999 9.33333C4.32936 9.33333 2.89841 10.1265 2.13745 10.8875C1.34605 11.6789 1.16833 12.5414 1.16667 12.8293H12.8333Z" fill="white"></path>
+        </svg >
+        Sign In</button>
+       </div>
+    </nav>
+
+
+    <h2 style="font-family: Poppins, sans-serif; color:#222; margin:20px 0 10px;">Apple Navbar</h2>
+
+    <nav id="Apple">
+        <svg height="44" viewBox="0 0 14 44" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z"></path></svg>
+        <ul>
+            <li>store</li>
+            <li> Mac</li>
+            <li> Ipad</li>
+            <li> Iphone</li>
+            <li> Watch</li>
+            <li> Vision </li>
+            <li> AirPods</li>
+            <li>Tv & Home</li>
+            <li> Entertainment</li>
+            <li> Accessories </li>
+            <li>Support</li>
+        </ul>
+        <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="44px" viewBox="0 0 15 44">
+<path d="M14.298,27.202l-3.87-3.87c0.701-0.929,1.122-2.081,1.122-3.332c0-3.06-2.489-5.55-5.55-5.55c-3.06,0-5.55,2.49-5.55,5.55 c0,3.061,2.49,5.55,5.55,5.55c1.251,0,2.403-0.421,3.332-1.122l3.87,3.87c0.151,0.151,0.35,0.228,0.548,0.228 s0.396-0.076,0.548-0.228C14.601,27.995,14.601,27.505,14.298,27.202z M1.55,20c0-2.454,1.997-4.45,4.45-4.45 c2.454,0,4.45,1.997,4.45,4.45S8.454,24.45,6,24.45C3.546,24.45,1.55,22.454,1.55,20z"></path>
+</svg>
+<svg height="44" viewBox="0 0 14 44" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m11.3535 16.0283h-1.0205a3.4229 3.4229 0 0 0 -3.333-2.9648 3.4229 3.4229 0 0 0 -3.333 2.9648h-1.02a2.1184 2.1184 0 0 0 -2.117 2.1162v7.7155a2.1186 2.1186 0 0 0 2.1162 2.1167h8.707a2.1186 2.1186 0 0 0 2.1168-2.1167v-7.7155a2.1184 2.1184 0 0 0 -2.1165-2.1162zm-4.3535-1.8652a2.3169 2.3169 0 0 1 2.2222 1.8652h-4.4444a2.3169 2.3169 0 0 1 2.2222-1.8652zm5.37 11.6969a1.0182 1.0182 0 0 1 -1.0166 1.0171h-8.7069a1.0182 1.0182 0 0 1 -1.0165-1.0171v-7.7155a1.0178 1.0178 0 0 1 1.0166-1.0166h8.707a1.0178 1.0178 0 0 1 1.0164 1.0166z"></path></svg>
+    </nav>
+
+      <h2 style="font-family: Poppins, sans-serif; color:#222; margin:20px 0 10px;">Swiggy Navbar</h2>
+
+      <nav id="Swiggy">
+        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/static-assets/images/swiggy_logo_white.png" alt="swiggy">
+        
+        <div id="last">
+           <button>Swiggy Corporate</button>
+           <button>Partner with us</button>
+           <button id="app">Get the App<i class="bi bi-arrow-up-right"></i></button>
+           <button id="sign"> Sign in</button>
+        </div>
+
+      </nav>
+
+
+       <h2 style="font-family: Poppins, sans-serif; color:#222; margin:20px 0 10px;">GFG Navbar</h2>
+      
+<nav class="GFG">
+
+
+    <div class="logo-area">
+        <img src="https://media.geeksforgeeks.org/gfg-gg-logo.svg" width="48">
+        <div class="search">
+            <input type="text" placeholder="Search...">
+        </div>
+    </div>
+
+
+    <ul>
+        <li>Courses</li>
+        <li>Tutorials</li>
+        <li>Practice</li>
+        <li>Jobs</li>
+        <li>Community</li>
+    </ul>
+
+    <div class="right">
+        <button>🌙</button>
+        <button>🔔</button>
+        <button>Sign In</button>
+    </div>
+
+</nav>
+</body>
+</html>

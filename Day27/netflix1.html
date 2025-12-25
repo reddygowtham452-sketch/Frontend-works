@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Netflix — Clone (HTML + CSS)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#141414;
+      --card:#1f1f1f;
+      --accent:#e50914; /* Netflix red */
+      --muted:#b3b3b3;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:#fff;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.25;
+    }
+
+    /* NAVBAR */
+    .nav{
+      position:fixed;top:0;left:0;right:0;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:40;
+      background:linear-gradient(180deg, rgba(20,20,20,0.8) 0%, rgba(20,20,20,0.35) 60%, rgba(20,20,20,0) 100%);
+      backdrop-filter: blur(6px);
+    }
+    .logo{display:flex;align-items:center;gap:14px}
+    .logo .mark{width:110px;height:28px;background:var(--accent);display:flex;align-items:center;justify-content:center;border-radius:4px;font-weight:800;letter-spacing:1px}
+    .nav .right{display:flex;align-items:center;gap:18px}
+    .nav a{color:#fff;text-decoration:none;font-weight:500}
+    .search{background:var(--glass);padding:8px 10px;border-radius:6px}
+    .avatar{width:36px;height:36px;border-radius:4px;background:linear-gradient(45deg,#c4c4c4,#8a8a8a)}
+
+    /* HERO */
+    .hero{
+      height:65vh;min-height:480px;background-image:linear-gradient(180deg, rgba(20,20,20,0.25), rgba(20,20,20,0.6)), url('https://picsum.photos/1600/900?random=10');
+      background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:48px 48px 64px;position:relative;margin-top:64px;
+    }
+    .hero .meta{max-width:760px}
+    .badge{display:inline-block;padding:6px 10px;background:rgba(0,0,0,0.45);border-radius:20px;color:var(--muted);font-weight:600;margin-bottom:12px}
+    .title{font-size:3rem;font-weight:800;margin:6px 0}
+    .desc{color:var(--muted);margin:14px 0 22px}
+
+    .cta{display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:6px;font-weight:700;border:none;cursor:pointer}
+    .btn-play{background:#fff;color:#000}
+    .btn-info{background:rgba(255,255,255,0.12);color:#fff}
+
+    /* content rows */
+    .container{padding:34px 46px}
+    .row{margin-bottom:28px}
+    .row h3{margin:6px 0 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+    .card{background:var(--card);border-radius:8px;overflow:hidden;position:relative;cursor:pointer;transform:translateZ(0);transition:transform .22s ease, box-shadow .22s ease}
+    .card img{width:100%;height:240px;object-fit:cover;display:block}
+    .card .label{padding:10px;font-size:14px;color:var(--muted)}
+    .card:hover{transform:scale(1.06);box-shadow:0 12px 28px rgba(0,0,0,0.6)}
+
+    /* small play icon overlay */
+    .card .play{position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.5);padding:8px;border-radius:6px}
+    .card .play:before{content:'▶';font-size:12px}
+
+    /* responsive tweaks */
+    @media (max-width:900px){
+      .hero{padding:30px;background-position:top;height:52vh}
+      .title{font-size:2rem}
+      .cards{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+    }
+    @media (max-width:520px){
+      .nav{padding:0 14px}
+      .hero{padding:22px 18px}
+      .container{padding:18px}
+      .cards{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}
+      .card img{height:180px}
+    }
+
+    /* small footer */
+    .footer{padding:40px 46px;color:var(--muted);font-size:14px}
+
+    /* utility */
+    .row-inline{display:flex;align-items:center;justify-content:space-between}
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="logo">
+      <div class="mark">NETFLIX</div>
+      <nav class="links" style="display:flex;gap:14px">
+        <a href="#">Home</a>
+        <a href="#">TV Shows</a>
+        <a href="#">Movies</a>
+        <a href="#">My List</a>
+      </nav>
+    </div>
+
+    <div class="right">
+      <div class="search">Search</div>
+      <a href="#">Kids</a>
+      <div class="avatar" title="Profile"></div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="meta">
+      <div class="badge">NEW EPISODE</div>
+      <h1 class="title">The Great Adventure</h1>
+      <p class="desc">An edge-of-your-seat thriller about courage, friendship and the unexpected turns of fate. Stream new episodes every Friday.</p>
+      <div class="cta">
+        <button class="btn btn-play">► Play</button>
+        <button class="btn btn-info">More info</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="row">
+      <div class="row-inline">
+        <h3>Trending Now</h3>
+        <a href="#" style="color:var(--muted);text-decoration:none">See all</a>
+      </div>
+      <div class="cards">
+        <!-- repeat cards: use picsum placeholders -->
+        <div class="card">
+          <img src="https://picsum.photos/320/480?random=1" alt="movie poster">
+          <div class="play"></div>
+          <div class="label">Action • 1h 52m</div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/320/480?random=2" alt="movie poster">
+          <div class="play"></div>
+          <div class="label">Drama • 2h 3m</div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/320/480?random=3" alt="movie poster">
+          <div class="play"></div>
+          <div class="label">Comedy • 1h 29m</div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/320/480?random=4" alt="movie poster">
+          <div class="play"></div>
+          <div class="label">Sci‑Fi • 2h 10m</div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/320/480?random=5" alt="movie poster">
+          <div class="play"></div>
+          <div class="label">Horror • 1h 40m</div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/320/480?random=6" alt="movie poster">
+          <div class="play"></div>
+          <div class="label">Romance • 1h 48m</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="row-inline">
+        <h3>Because you watched "The Great Adventure"</h3>
+        <a href="#" style="color:var(--muted);text-decoration:none">See all</a>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <img src="https://picsum.photos/320/480?random=7" alt="movie poster">
+          <div class="play"></div>
+          <div class="label">Documentary • 1h 12m</div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/320/480?random=8" alt="movie poster">
+          <div class="play"></div>
+          <div class="label">Thriller • 1h 55m</div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/320/480?random=9" alt="movie poster">
+          <div class="play"></div>
+          <div class="label">Animated • 1h 20m</div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/320/480?random=11" alt="movie poster">
+          <div class="play"></div>
+          <div class="label">Crime • 2h</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    Questions? Contact us • © 2025 Netflix-ish Clone
+  </footer>
+
+</body>
+</html>

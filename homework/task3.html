@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login with Multi Pages</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e9f0f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 320px;
+      text-align: center;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 95%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #mainContent {
+      display: none;
+      width: 90%;
+      max-width: 600px;
+      text-align: left;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #007bff;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    nav button {
+      background: white;
+      color: #007bff;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #e0e0e0;
+    }
+
+    section {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 0 5px gray;
+    }
+
+    h2 {
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Login Section -->
+  <div class="container" id="loginPage">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Enter Username"><br>
+    <input type="password" id="password" placeholder="Enter Password"><br>
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- Main Content (after login) -->
+  <div id="mainContent">
+    <nav>
+      <button onclick="showPage('home')">Home</button>
+      <button onclick="showPage('about')">About</button>
+      <button onclick="showPage('contact')">Contact</button>
+      <button onclick="logout()">Logout</button>
+    </nav>
+
+    <section id="home">
+      <h2>🏠 Home Page</h2>
+      <p>Welcome to the main dashboard! You have successfully logged in.</p>
+    </section>
+
+    <section id="about">
+      <h2>ℹ️ About Page</h2>
+      <p>This is a demo web application showing how to use HTML, CSS, and JavaScript for login and navigation — all in one page.</p>
+    </section>
+
+    <section id="contact">
+      <h2>📞 Contact Page</h2>
+      <p>For any queries, contact us at <b>support@example.com</b>.</p>
+    </section>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      if (user === "admin" && pass === "12345") {
+        document.getElementById("loginPage").style.display = "none";
+        document.getElementById("mainContent").style.display = "block";
+        showPage('home');
+      } else {
+        alert("Invalid Username or Password");
+      }
+    }
+
+    function logout() {
+      document.getElementById("loginPage").style.display = "block";
+      document.getElementById("mainContent").style.display = "none";
+      document.getElementById("username").value = "";
+      document.getElementById("password").value = "";
+    }
+
+    function showPage(pageId) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => section.style.display = "none");
+      document.getElementById(pageId).style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 2px solid;
+            background-color: blue;
+            margin-bottom: 20px;
+        }
+        #transition{
+            transition: transform 5s;
+        }
+        #transition:hover{
+            transform: translate(600px) rotate(180deg);
+            border-radius: 50%;
+        }
+        #animation{
+            background-color: yellow;
+            animation: move 5s;
+        }
+        @keyframes move {
+            50%{
+                  transform: translate(600px) rotate(180deg);
+                   border-radius: 50%;
+            }
+             100%{
+                  transform: translate(0px) rotate(0deg);
+                   border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="transition"></div>
+     <div class="box" id="animation"></div>
+</body>
+</html>

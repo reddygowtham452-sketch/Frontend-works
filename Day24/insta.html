@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title> 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #fafafa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Navbar */
+    .navbar {
+      width: 100%;
+      background-color: #fff;
+      border-bottom: 1px solid #dbdbdb;
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-content {
+      width: 100%;
+      max-width: 950px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+    }
+
+    .logo {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 32px;
+      color: #262626;
+    }
+
+    .nav-icons span {
+      margin-left: 20px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* Profile Section */
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-top: 40px;
+      max-width: 935px;
+      width: 100%;
+      padding: 0 20px;
+      gap: 50px;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 3px solid #dbdbdb;
+      background: url('https://via.placeholder.com/160') center/cover no-repeat;
+    }
+
+    .profile-info h2 {
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    .stats {
+      display: flex;
+      gap: 25px;
+      margin: 15px 0;
+      font-size: 16px;
+    }
+
+    .bio {
+      font-size: 15px;
+      color: #555;
+    }
+
+    /* Post Grid */
+    .post-section {
+      border-top: 1px solid #dbdbdb;
+      max-width: 935px;
+      width: 100%;
+      margin-top: 40px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .post {
+      width: 100%;
+      aspect-ratio: 1/1;
+      background: #ddd;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .post:hover {
+      transform: scale(1.03);
+    }
+
+    /* Footer */
+    footer {
+      margin: 40px 0;
+      color: #888;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .profile {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="logo">Instagram</div>
+      <div class="nav-icons">
+        <span>🏠</span>
+        <span>❤️</span>
+        <span>💬</span>
+        <span>🔍</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Profile Section -->
+  <section class="profile">
+    <div class="profile-pic"></div>
+    <div class="profile-info">
+      <h2>@MR__FAMOUS__GUY__</h2>
+      <div class="stats">
+        <span><b>120</b> posts</span>
+        <span><b>1,250</b> followers</span>
+        <span><b>300</b> following</span>
+      </div>
+      <div class="bio">
+        ✨ Nature lover | 📸 Photographer<br>
+        🌍 Exploring the world one photo at a time
+      </div>
+    </div>
+  </section>
+
+  <!-- Post Grid -->
+  <section class="post-section">
+    <div class="post" style="background-image:url('https://via.placeholder.com/300x300?text=Post+1');"></div>
+    <div class="post" style="background-image:url('https://via.placeholder.com/300x300?text=Post+2');"></div>
+    <div class="post" style="background-image:url('https://via.placeholder.com/300x300?text=Post+3');"></div>
+    <div class="post" style="background-image:url('https://via.placeholder.com/300x300?text=Post+4');"></div>
+    <div class="post" style="background-image:url('https://via.placeholder.com/300x300?text=Post+5');"></div>
+    <div class="post" style="background-image:url('https://via.placeholder.com/300x300?text=Post+6');"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Offline Instagram UI Demo © 2025</p>
+  </footer>
+
+</body>
+</html>

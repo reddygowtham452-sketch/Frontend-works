@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<html>
+<head>
+<style>
+.box1, .box2, .box3 {
+  width: 150px;
+  height: 100px;
+  margin: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: transform 0.5s;
+}
+
+.box1 {
+  background-color: coral;
+  transform: skewX(20deg);       /* Skew along X-axis */
+}
+
+.box2 {
+  background-color: teal;
+  transform: skewY(15deg);       /* Skew along Y-axis */
+}
+
+.box3 {
+  background-color: purple;
+  transform: skew(20deg, 10deg); /* Skew along both X and Y */
+}
+
+/* Hover Animation */
+.box1:hover, .box2:hover, .box3:hover {
+  transform: skew(0deg, 0deg);   /* Reset skew on hover */
+}
+</style>
+</head>
+<body>
+
+<h2>CSS Skew Examples</h2>
+<div class="box1">SkewX(20deg)</div>
+<div class="box2">SkewY(15deg)</div>
+<div class="box3">Skew(20deg, 10deg)</div>
+
+</body>
+</html>

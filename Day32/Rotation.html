@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 300px;
+            width: 200px;
+           
+        }
+        #container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        img[alt="img1"]{
+            animation: leftimage 5s infinite;
+        }
+         img[alt="img3"]{
+            animation: rightimage 5s infinite;
+        }
+         img[alt="img2"]{
+            animation: middleimage 5s  infinite;
+            animation-delay: 3s;
+        }
+        @keyframes leftimage {
+            to{
+                transform: rotateY(180deg);
+                content: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt6fKsH1BKScDRkLD6Sv7SpkGF_sb6fCLTZw&s);
+            }
+        }
+        @keyframes rightimage {
+            to{
+                transform: rotateY(180deg);
+                content: url(https://media.istockphoto.com/id/943824574/photo/cute-boy-with-roses.jpg?s=612x612&w=0&k=20&c=-CPam5Nw6VVdSlTKG-XoCw6Hy9TDrZfq-EUs3yPiu4s=);
+            }
+        }
+         @keyframes middleimage {
+            to{
+                transform: rotateY(180deg);
+                content: url(https://www.shutterstock.com/image-photo/girl-holding-huge-delicate-flower-260nw-2367590871.jpg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="https://www.shutterstock.com/image-photo/handsome-guy-holding-flowers-behind-260nw-475788304.jpg" alt="img1">
+        <img src="https://www.shutterstock.com/image-photo/handsome-woman-two-lush-flower-260nw-2236720977.jpg" alt="img2">
+        <img src="https://www.shutterstock.com/image-photo/man-holding-bouquet-roses-260nw-578881669.jpg" alt="img3">
+    </div>
+</body>
+</html>

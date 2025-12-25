@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ .flower {
+  position: relative; 
+  width: 100px; 
+  height: 100px; 
+  margin: 50px auto; 
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 40px;
+  height: 40px;
+  background-color: #FFD700; 
+  border-radius: 50%; 
+  z-index: 2; 
+}
+
+.petal {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  background-color: #FF69B4; 
+  border-radius: 50% 50% 0 0; 
+  transform-origin: 50% 100%; 
+  z-index: 1; 
+}
+
+.petal-1 { transform: translate(-50%, -50%) rotate(0deg); top: 50%; left: 50%; }
+.petal-2 { transform: translate(-50%, -50%) rotate(60deg); top: 50%; left: 50%; }
+.petal-3 { transform: translate(-50%, -50%) rotate(120deg); top: 50%; left: 50%; }
+.petal-4 { transform: translate(-50%, -50%) rotate(180deg); top: 50%; left: 50%; }
+.petal-5 { transform: translate(-50%, -50%) rotate(240deg); top: 50%; left: 50%; }
+.petal-6 { transform: translate(-50%, -50%) rotate(300deg); top: 50%; left: 50%; }
+    </style>
+    <br>
+    <br>
+    <br>
+    <style>
+        .flower-container {
+  position: relative;
+  width: 200px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+  margin: 50px auto;
+}
+
+.leaf {
+  position: absolute;
+  width: 80px; /* Width of the leaf */
+  height: 40px; /* Height of the leaf */
+  background-color: #4CAF50; /* Green color for leaves */
+  border-radius: 0 50px 0 50px; /* Rounded corners to shape the leaf */
+  transform-origin: 50% 100%; /* Pivot point for rotation */
+}
+
+/* Positioning and rotating individual leaves */
+.leaf-1 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.leaf-2 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(72deg);
+}
+
+.leaf-3 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(144deg);
+}
+
+.leaf-4 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(216deg);
+}
+
+.leaf-5 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(288deg);
+}
+
+.center-petal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px; /* Size of the center */
+  height: 50px; /* Size of the center */
+  background-color: #FFC107; /* Yellow color for the center */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ensure it's on top of leaves */
+}
+    </style>
+</head>
+<body>
+    <div class="flower">
+  <div class="center"></div>
+  <div class="petal petal-1"></div>
+  <div class="petal petal-2"></div>
+  <div class="petal petal-3"></div>
+  <div class="petal petal-4"></div>
+  <div class="petal petal-5"></div>
+  <div class="petal petal-6"></div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div>
+    <div class="flower-container">
+  <div class="leaf leaf-1"></div>
+  <div class="leaf leaf-2"></div>
+  <div class="leaf leaf-3"></div>
+  <div class="leaf leaf-4"></div>
+  <div class="leaf leaf-5"></div>
+  <div class="center-petal"></div>
+</div>
+</div>
+</body>
+</html>
