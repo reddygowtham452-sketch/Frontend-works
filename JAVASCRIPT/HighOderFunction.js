@@ -1,25 +1,24 @@
-function add(a,b,c){
-    let d=a+b;
-    console.log(c);
-    returnc(d)
-}
-function cb(z){
-    console.log(z);
-}
+// function add(a, b, c) {
+//   let d = a + b;
+//   return c(d);
+// }
 
-add(2,3,cb) 
+// function cb(z) {
+//   console.log(z);
+// }
 
+// add(2, 3, cb);
 
-function area (s){
-    return s*s
-}
-function perimeter (b){
-    return 4*b
-}
-function square(a,b){
-    return1(b)
+// function area(s) {
+//   return s * s;
+// }
 
-}
-console.log(square (4, area))
+// function perimeter(b) {
+//   return 4 * b;
+// }
 
-console.log(square (4, area))
+// function square(a, fn) {
+//   return fn(a);
+// }
+
+// console.log(square(4, area));
